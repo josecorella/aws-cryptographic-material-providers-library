@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/josecorella/aws-cryptographic-material-providers-library/compare/v1.2.0...v1.2.1) (2024-1-25)
+
+
+### Bug Fixes
+
+* dir name in java mpl release process ([#162](https://github.com/josecorella/aws-cryptographic-material-providers-library/issues/162)) ([d92c06a](https://github.com/josecorella/aws-cryptographic-material-providers-library/commit/d92c06a2fd355290f27df669c866157e14da9793))
+
 ## 1.2.0 (2024-01-08)
 
 ### Features
