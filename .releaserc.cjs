@@ -20,6 +20,9 @@
 // We model all the files and the runtimes here in this structure
 const Runtimes = {
   java: {
+    "project.properties": {
+      dependencies: [],
+    },
     "AwsCryptographicMaterialProviders/runtimes/java/build.gradle.kts": {
       dependencies: [],
     },
@@ -103,6 +106,14 @@ module.exports = {
       "semantic-release-replace-plugin",
       {
         replacements: [
+          // Update the version in the project.properties file
+          {
+            files: Object.keys(Runtimes.java),
+            from: 'mplVersion=".*"',
+            to: 'mplVersion="${nextRelease.version}"',
+            results: Object.keys(Runtimes.java).map(CheckResults),
+            countMatches: true,
+          },
           // Update the version for all Gradle Java projects
           // Does not update the dependencies
           {
